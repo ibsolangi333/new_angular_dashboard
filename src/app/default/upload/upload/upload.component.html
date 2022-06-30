@@ -1,0 +1,158 @@
+<div class="container-fluid">
+    <h1 class="top-page-name-custom">Upload</h1>
+    <div class="row">
+        <form [formGroup]="uploadform" (ngSubmit)="submitfun()">
+            <div class="col-lg-8 offset-lg-2 form-row-custom">
+                <!-- course thumbnail  -->
+                <span class="choose-file-custom">Course Thumbnail</span>
+                <input type="file" style="padding-left: 10px;" formControlName="coursethumbnail">
+                <div *ngIf="submitted && uploadform.controls.coursethumbnail.errors">
+                    <h1 class="form-error-custom" 
+                    *ngIf="submitted && uploadform.controls.coursethumbnail.errors.required">
+                        *Please choose any file*
+                    </h1>
+                </div>                                 
+                <!-- course title -->
+                <input type="text" class="w-100 form-custom-class" placeholder="Course Title"
+                formControlName="coursetitle">
+                <div *ngIf="submitted && uploadform.controls.coursetitle.errors">
+                    <h1 class="form-error-custom" 
+                    *ngIf="submitted && uploadform.controls.coursetitle.errors.required">
+                        *Please fill input field*
+                    </h1>
+                </div>
+                <!-- course describtion -->
+                <input type="text" class="w-100 form-custom-class" placeholder="Course Descroption"
+                formControlName="CourseDescroption">
+                <div *ngIf="submitted && uploadform.controls.CourseDescroption.errors">
+                    <h1 class="form-error-custom" 
+                    *ngIf="submitted && uploadform.controls.CourseDescroption.errors.required">
+                        *Please fill input field*
+                    </h1>
+                </div>
+                <!-- course price -->
+                <input type="text" class="w-100 form-custom-class" placeholder="Course Price"
+                formControlName="CoursePrice">
+                <div *ngIf="submitted && uploadform.controls.CoursePrice.errors">
+                    <h1 class="form-error-custom" 
+                    *ngIf="submitted && uploadform.controls.CoursePrice.errors.required">
+                        *Please fill input field*
+                    </h1>
+                </div>
+                <!-- course category  -->
+                <select placeholder="Course Category" formControlName="CourseCategory" class="w-100 color-select-custom form-custom-class">
+                    <option value="">Course Category</option>
+                    <option value="select1">select 1</option>
+                    <option value="select2">select 2</option>
+                    <option value="select3">select 3</option>
+                    <option value="select4">select 4</option>
+                </select>
+                <div *ngIf="submitted && uploadform.controls.CourseCategory.errors">
+                    <h1 class="form-error-custom" 
+                    *ngIf="submitted && uploadform.controls.CourseCategory.errors.required">
+                        *Please select any option*
+                    </h1>
+                </div>
+                <!-- course sub category  -->
+                <input type="text" class="w-100 form-custom-class" placeholder="Course sub-category"
+                formControlName="Coursesubcategory">
+                <div *ngIf="submitted && uploadform.controls.Coursesubcategory.errors">
+                    <h1 class="form-error-custom" 
+                    *ngIf="submitted && uploadform.controls.Coursesubcategory.errors.required">
+                        *Please fill input field*
+                    </h1>
+                </div>
+                <!-- course Difficuilty level -->
+                <select formControlName="Coursediffculty" class="w-100 color-select-custom form-custom-class">
+                    <option value="">Course Difficuilty Level</option>
+                    <option value="select1">select</option>
+                    <option value="select2">select</option>
+                    <option value="select3">select</option>
+                    <option value="select4">select</option>
+                </select>
+                <div *ngIf="submitted && uploadform.controls.Coursediffculty.errors">
+                    <h1 class="form-error-custom" 
+                    *ngIf="submitted && uploadform.controls.Coursediffculty.errors.required">
+                        *Please select any option*
+                    </h1>
+                </div>
+                <!-- ourse feature -->
+                <input type="text" class="w-100 form-custom-class" placeholder="Course Features"
+                formControlName="Coursefeatures">
+                <div *ngIf="submitted && uploadform.controls.Coursefeatures.errors">
+                    <h1 class="form-error-custom" 
+                    *ngIf="submitted && uploadform.controls.Coursefeatures.errors.required">
+                        *Please fill input field*
+                    </h1>
+                </div>
+                <!-- course tags -->
+                <input type="text" class="w-100 form-custom-class" placeholder="Course Tags"
+                formControlName="Coursetags">
+                <div *ngIf="submitted && uploadform.controls.Coursetags.errors">
+                    <h1 class="form-error-custom" 
+                    *ngIf="submitted && uploadform.controls.Coursetags.errors.required">
+                        *Please fill input field*
+                    </h1>
+                </div>
+                <!-- learners accessbiltiy -->
+                <select formControlName="learneraccessbiltiy" class="w-100 color-select-custom form-custom-class">
+                    <option value="">Learner`s Accessibility</option>
+                    <option value="select1">select</option>
+                    <option value="select2">select</option>
+                    <option value="select3">select</option>
+                    <option value="select4 ">select</option>
+                </select>
+                <div *ngIf="submitted && uploadform.controls.learneraccessbiltiy.errors">
+                    <h1 class="form-error-custom" 
+                    *ngIf="submitted && uploadform.controls.learneraccessbiltiy.errors.required">
+                        *Please select any option*
+                    </h1>
+                </div>
+                <!-- lesson video -->
+                <div class="mt-4">
+                    <span class="choose-file-custom">Lesson Video</span>
+                    <input type="file" style="padding-left: 10px;" formControlName="LessonVideo">
+                </div>
+                <div *ngIf="submitted && uploadform.controls.LessonVideo.errors">
+                    <h1 class="form-error-custom" 
+                    *ngIf="submitted && uploadform.controls.LessonVideo.errors.required">
+                        *Please choose any file*
+                    </h1>
+                </div>
+                <!-- video thumbnail -->
+                <div class="mt-4">
+                    <span class="choose-file-custom">video Thumbnail</span>
+                    <input type="file" style="padding-left: 10px;" formControlName="videoThumbnail">
+                </div>
+                <div *ngIf="submitted && uploadform.controls.videoThumbnail.errors">
+                    <h1 class="form-error-custom" 
+                    *ngIf="submitted && uploadform.controls.videoThumbnail.errors.required">
+                        *Please choose any file*
+                    </h1>
+                </div>
+                <!-- lesson name -->
+                <input type="text" class="w-100 form-custom-class" placeholder="Lesson Name"
+                formControlName="lessonname">
+                <div *ngIf="submitted && uploadform.controls.lessonname.errors">
+                    <h1 class="form-error-custom" 
+                    *ngIf="submitted && uploadform.controls.lessonname.errors.required">
+                        *Please fill input field*
+                    </h1>
+                </div>
+                <!-- lesson describtion -->
+                <input type="text" class="w-100 form-custom-class" placeholder="Lesson Description"
+                formControlName="lessondescribtion">
+                <div *ngIf="submitted && uploadform.controls.lessondescribtion.errors">
+                    <h1 class="form-error-custom" 
+                    *ngIf="submitted && uploadform.controls.lessondescribtion.errors.required">
+                        *Please fill input field*
+                    </h1>
+                </div>
+                <!-- buttons -->
+                <button  class="btn submite-btn-custom">Submite</button>
+                <button (click)="cancelfun()" class="btn  cancel-btn-custom">Cancel</button>
+            </div>
+        </form>    
+    </div>
+</div>
+
