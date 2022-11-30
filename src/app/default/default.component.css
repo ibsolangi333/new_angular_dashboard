@@ -8,9 +8,9 @@
 .router-div-custom{
     padding-left: 70px;
     padding-right: 20px;
-    /*background-color: rgb(242, 243, 249);*/
+    background-color: rgb(242, 243, 249); 
     padding-bottom: 20px;
-/*     min-height: 90vh; */height: auto;
+    min-height: 90vh; 
 }
 
 @media screen and (max-width: 992px){
