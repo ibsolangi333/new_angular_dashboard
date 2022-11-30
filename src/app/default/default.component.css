@@ -10,7 +10,7 @@
     padding-right: 20px;
     background-color: rgb(242, 243, 249);
     padding-bottom: 20px;
-    min-height: 90vh;
+/*     min-height: 90vh; */height: auto;
 }
 
 @media screen and (max-width: 992px){
